@@ -1,12 +1,15 @@
 # Instalation (Mac)
 
-## Install Homebrew
+## Prerequisite
+
+<details><summary> MAC </summary>
+### Install Homebrew
 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## Add To Path (Only Apple Silicon Macbooks)
+### Add To Path (Only Apple Silicon Macbooks)
 
 ```sh
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
@@ -14,7 +17,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 This step is not necessary in intel based macbooks.
 
-## Install iTerm2
+### Install iTerm2
 
 ```sh
 brew install iterm
@@ -30,17 +33,55 @@ Add set your terminal font to `MesloLGS Nerd Font Mono`.
 
 **iTerm2 -> Settings -> Profiles -> Text -> Font**
 
+
+</details>
+
+<details><summary> Ubuntu </summary>
+
+### ripgrep
+
+```sh
+apt-get install ripgrep
+```
+
+### Nerd Font
+
+```sh 
+#!/bin/bash
+
+sudo apt install fontconfig
+cd ~
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+mkdir -p .local/share/fonts
+unzip Meslo.zip -d .local/share/fonts
+cd .local/share/fonts
+rm *Windows*
+cd ~
+rm Meslo.zip
+fc-cache -fv
+```
+
+then set your terminal font to `MesloLGS Nerd Font Mono`.
+
+</details>
+
 ## Install NeoVim
+
+<details><summary> Mac </summary>
 
 ```sh
 brew install neovim
 ```
 
-## Install ripgrep
+</details>
+
+<details><summary> Ubuntu </summary>
 
 ```sh
-brew install ripgrep
+sudo apt install neovim
 ```
+
+</details>
 
 ## Setting up neovim config and plugins
 
