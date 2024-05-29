@@ -1,4 +1,4 @@
-# Instalation - Uses (Mac)
+# Instalation (Mac)
 
 ## Install Homebrew
 
@@ -13,6 +13,22 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 This step is not necessary in intel based macbooks.
+
+## Install iTerm2
+
+```sh
+brew install iterm
+```
+
+## Install NerdFont
+
+```sh
+brew install font-meslo-lg-nerd-font
+```
+
+Add set your terminal font to `MesloLGS Nerd Font Mono`.
+
+**iTerm2 -> Settings -> Profiles -> Text -> Font**
 
 ## Install NeoVim
 
@@ -56,8 +72,8 @@ git clone git@github.com:wgetDJ/nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvi
 </details>
 
 ### Post Installation
-TODO:
 
-- Post Installation Process
-- Keymaps
+Open neovim using `nvim`. `Lazy` should automatically install all the plugins. If not then press `:Lazy` to open Lazy UI. Once installation is done press `q` to close Lazy UI.
+
+Voilà! Your NeoVim is up and running. Have fun.
 
