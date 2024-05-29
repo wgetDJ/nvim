@@ -41,7 +41,7 @@ Add set your terminal font to `MesloLGS Nerd Font Mono`.
 ### ripgrep
 
 ```sh
-apt-get install ripgrep
+sudo apt-get install ripgrep
 ```
 
 ### Install curl
@@ -84,19 +84,10 @@ brew install neovim
 <details><summary> Ubuntu </summary>
 
 ```sh
-sudo apt install neovim
-```
-
-### Clone Lazy repository
-
-```sh
-git clone https://github.com/folke/lazy.nvim.git ~/.config/nvim/lazy
-```
-
-### Add Lazy.nvim to runtime path
-
-```sh
-echo "set rtp+=~/.config/nvim/lazy" >> ~/.config/nvim/init.vim
+curl -LO
+https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
 ```
 
 </details>
