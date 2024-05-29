@@ -15,6 +15,7 @@
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
+
 This step is not necessary in intel based macbooks.
 
 ### Install iTerm2
@@ -33,7 +34,6 @@ Add set your terminal font to `MesloLGS Nerd Font Mono`.
 
 **iTerm2 -> Settings -> Profiles -> Text -> Font**
 
-
 </details>
 
 <details><summary> Ubuntu </summary>
@@ -44,9 +44,15 @@ Add set your terminal font to `MesloLGS Nerd Font Mono`.
 apt-get install ripgrep
 ```
 
+### Install curl
+
+```sh
+sudo apt-get install curl git
+```
+
 ### Nerd Font
 
-```sh 
+```sh
 #!/bin/bash
 
 sudo apt install fontconfig
@@ -100,6 +106,23 @@ fork to your machine using one of the commands below, depending on your OS.
 ```sh
 git clone https://github.com/wgetDJ/nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
+
+### Clone Lazy repository
+
+```sh
+git clone https://github.com/folke/lazy.nvim.git ~/.config/nvim/lazy
+```
+
+### Add Lazy.nvim to runtime path
+
+```sh
+echo "set rtp+=~/.config/nvim/lazy" >> ~/.config/nvim/init.vim
+```
+
+```sh
+nvim +LazyInstall +qall
+```
+
 </details>
 
 <details><summary> SSH </summary>
@@ -110,6 +133,7 @@ git clone https://github.com/wgetDJ/nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"
 ```sh
 git clone git@github.com:wgetDJ/nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
 ```
+
 </details>
 
 ### Post Installation
@@ -117,4 +141,3 @@ git clone git@github.com:wgetDJ/nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvi
 Open neovim using `nvim`. `Lazy` should automatically install all the plugins. If not then press `:Lazy` to open Lazy UI. Once installation is done press `q` to close Lazy UI.
 
 Voilà! Your NeoVim is up and running. Have fun.
-
