@@ -87,6 +87,18 @@ brew install neovim
 sudo apt install neovim
 ```
 
+### Clone Lazy repository
+
+```sh
+git clone https://github.com/folke/lazy.nvim.git ~/.config/nvim/lazy
+```
+
+### Add Lazy.nvim to runtime path
+
+```sh
+echo "set rtp+=~/.config/nvim/lazy" >> ~/.config/nvim/init.vim
+```
+
 </details>
 
 ## Setting up neovim config and plugins
@@ -105,22 +117,6 @@ fork to your machine using one of the commands below, depending on your OS.
 
 ```sh
 git clone https://github.com/wgetDJ/nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-```
-
-### Clone Lazy repository
-
-```sh
-git clone https://github.com/folke/lazy.nvim.git ~/.config/nvim/lazy
-```
-
-### Add Lazy.nvim to runtime path
-
-```sh
-echo "set rtp+=~/.config/nvim/lazy" >> ~/.config/nvim/init.vim
-```
-
-```sh
-nvim +LazyInstall +qall
 ```
 
 </details>
